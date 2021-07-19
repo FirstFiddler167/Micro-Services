@@ -16,7 +16,6 @@ namespace Discount.Grpc.Services
         private readonly ILogger<DiscountService> _logger;
         private readonly IDiscountRepository _repository;
         private readonly IMapper _mapper;
-
         public DiscountService(ILogger<DiscountService> logger, IDiscountRepository repository, IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -56,11 +55,8 @@ namespace Discount.Grpc.Services
             var result = await _repository.DeleteDiscount(request.ProductName);
             if (!result)
                 throw new RpcException(new Status(StatusCode.NotFound, $"Delete Discount is not Success."));
-            _logger.LogInformation("Discount is successfully Delete. ProductName : {ProductName}", coupon.ProductName);
+            _logger.LogInformation("Discount is successfully Delete. ProductName : {ProductName}", request.ProductName);
             return new DeleteDiscountResponse { Success = result };
         }
-        
-       
-
     }
 }
