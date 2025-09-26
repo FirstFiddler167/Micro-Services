@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ABA7278B-7788-493C-A380-8F343E78A71F}"
 EndProject
@@ -43,7 +43,28 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Aggregator", "ApiG
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{3F64A46E-DF7B-4E06-A787-9BB3043C9888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{D4BF1412-DC94-4633-A3CB-6E9B161DCDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{D4BF1412-DC94-4633-A3CB-6E9B161DCDB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8s", "K8s", "{A7C6E4DA-9469-4B85-85F7-EA29D0D54B4C}"
+	ProjectSection(SolutionItems) = preProject
+		K8s\basket-api-deployment.yaml = K8s\basket-api-deployment.yaml
+		K8s\basketdb-deployment.yaml = K8s\basketdb-deployment.yaml
+		K8s\catalog-api-deployment.yaml = K8s\catalog-api-deployment.yaml
+		K8s\catalogdb-deployment.yaml = K8s\catalogdb-deployment.yaml
+		K8s\dashboard-admin.yaml = K8s\dashboard-admin.yaml
+		K8s\discount-api-deployment.yaml = K8s\discount-api-deployment.yaml
+		K8s\discount-grpc-deployment.yaml = K8s\discount-grpc-deployment.yaml
+		K8s\discountdb-deployment.yaml = K8s\discountdb-deployment.yaml
+		K8s\identity-api-deployment.yaml = K8s\identity-api-deployment.yaml
+		K8s\identydb-deployment.yaml = K8s\identydb-deployment.yaml
+		K8s\ocelotapigw-deployment.yaml = K8s\ocelotapigw-deployment.yaml
+		K8s\orderdb-deployment.yaml = K8s\orderdb-deployment.yaml
+		K8s\ordering-api-deployment.yaml = K8s\ordering-api-deployment.yaml
+		K8s\pgadmin-deployment.yaml = K8s\pgadmin-deployment.yaml
+		K8s\portainer-deployment.yaml = K8s\portainer-deployment.yaml
+		K8s\rabbitmq-deployment.yaml = K8s\rabbitmq-deployment.yaml
+		K8s\shopping-aggregator-deployment.yaml = K8s\shopping-aggregator-deployment.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

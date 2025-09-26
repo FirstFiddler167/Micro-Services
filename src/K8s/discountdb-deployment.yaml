@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\The_F\Downloads\kompose-windows-amd64 (1).exe convert -f C:\Users\The_F\source\repos\Miro-Services\src\docker-compose.yml -v
+    kompose.version: 1.37.0 (fb0539e64)
+  labels:
+    io.kompose.service: discountdb
+  name: discountdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: discountdb
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\The_F\Downloads\kompose-windows-amd64 (1).exe convert -f C:\Users\The_F\source\repos\Miro-Services\src\docker-compose.yml -v
+        kompose.version: 1.37.0 (fb0539e64)
+      labels:
+        io.kompose.service: discountdb
+    spec:
+      containers:
+        - image: postgres
+          name: discountdb
+      restartPolicy: Always
