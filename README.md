@@ -1,4 +1,4 @@
-# Miro-Services
+# Micro-Services
 
 Professional microservices reference implementation built with .NET 8 and C# 12. This repository demonstrates practical patterns for service decomposition, synchronous (gRPC) and asynchronous (RabbitMQ) communication, caching with Redis, and persistence with MongoDB.
 
